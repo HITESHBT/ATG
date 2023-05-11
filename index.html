@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/87c3c32812.js" crossorigin="anonymous"></script>
+    <style>
+      body{
+        overflow-x: hidden;
+      }
+      /* navbar */
+      .main-nav{
+        border:4% 6%;
+      }
+      .brand-text
+      {
+        font-size: 28px;
+      }
+      .brand-union
+      {
+        height:24px;width: 24px;position:relative;bottom:4.8px;
+      }
+      .searchBar{
+        background-color: #F2F2F2;
+        border-radius: 21px;
+        border-color: #F2F2F2;
+        border-style: none;
+        color: #5C5C5C;
+
+        padding:0.5% 1%;
+
+      }
+      /* Main body--->group */
+      .group{
+        background-image: url('images/Rectangle 2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(75%);
+    height: 35vw;
+  max-width: 100%;
+  width: 100%;
+      }
+
+
+@media (max-width: 480px) {
+  .group {
+    height: 20vw; /* adjust the height as needed */
+  }
+  .group-text{
+    font-size: 0.75vw;
+  }
+}
+      .group-text{
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        color: white;
+        position:relative;
+        top:65%;
+        left:13%;
+      }
+      @media (max-width: 768px) {
+      .group-text {
+        font-size: 0.75vw; 
+      }
+      }
+      @media only screen and (max-width: 768px) {
+      .group {
+        height: 25vw; /* adjust the height as needed */
+      }
+      }
+      @media only screen and (max-width: 1426px) {
+      .group {
+        height: 35vw; /* adjust the height as needed */
+      }
+      }
+
+      /* post-section---------------------------------------------------> */
+      .post-nav{
+        background-color: white;
+        padding:none;
+        margin:2% 12%;
+      }
+      .post-container{
+        padding:none;
+      }
+      .cards{
+        background-color: #ffffff;
+        border-style:solid;
+        border-color: #f1f1f1;
+        border-radius:4px;
+        margin:1.5%;
+      }
+      .card-row{
+        margin:2% 12%;
+      }
+      .cards-image{
+        width:100%;
+        height:15vw;
+      }
+      .card-subject{
+        margin-top:1.5%;
+        margin-left:2%;
+        font-weight: 500;
+      }
+      .card-headLine{
+        margin-left:2%;
+      }
+      .text{
+        margin-left:2%;
+      }
+      .flexFlow{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width:100%;
+        
+      }
+      .profile-button{
+        border-style:none;
+        border-radius: 5px;
+        margin-left:1%;
+        margin-bottom:1%;
+      }
+      .share{
+        border-style: none;
+        border-radius: 5px;
+        margin-right:1%;
+        margin-bottom:1%;
+      }
+      .profile-photo{
+        border-radius: 50%;
+        height:2.5vw;
+        width:2.5vw;
+        margin-right: 0.5vw;
+      }
+      .fx-bt{
+        position:fixed;
+        right:10vw;
+        bottom:4vw;
+        border-radius: 50%;
+        height:4vw;
+        width:4vw;
+        background-color: rgb(234, 77, 108);
+      }
+      .fx-bt img{
+        position:fixed;
+        right:10vw;
+        bottom:4vw;
+        height:2vw;
+        width:2vw;
+        margin:1vw;
+      }
+      .fn,.ln{
+        width:25%;
+      }
+      .emailac,.passwordac,.Google,.Facebook,.sign-up{
+          width:50%;
+        }
+      @media (max-width:768px)
+      {
+        .place{
+          order:1;
+        }
+        .fn,.ln{
+        width:50%;
+      }
+      .emailac,.passwordac,.Google,.Facebook,.sign-up{
+          width:100%;
+        }
+      #popup{
+        top:100vh;
+      }
+      }
+      #popup {
+        position: fixed;
+        top: 50px;
+        left: 10%;
+        width: 80%;
+        background-color: white;
+        border: 1px solid black;
+        z-index: 1000;
+        opacity: 1;
+        border-radius:25px;
+        filter: alpha(opacity=80);
+        padding: 5%;
+      }
+    </style>
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light main-nav">
+        <div class="container">
+          <a class="navbar-brand" href="#" > <span class="brand-text" style="color:#27A365;">ATG.</span><span class="brand-text">W</span><span><img class="brand-union" src="images/Union.png" alt=""></span><span class="brand-text">RLD</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarNav">
+            
+              <button class="searchBar ms-auto" style="font-size: 15px;"> <span><img src="images/Vector.png" alt="" style="border:5px;"></span> Search for your favourite groups in ATG</button>
+            
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active " aria-current="page" href="#" style="font-size: 18px;"> <span style="color:#2E2E2E"></span> Create account<span style="color:#2F6CE5">.It's Free</span><span><img src="images/Vector.svg" alt=""></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+       
+      <button class="btn fx-bt"><img src="images/edit_24px.png" alt=""></button>
+      <!-- create signup and login -->
+      <div id="popup">
+        <h1>Create Account</h1>
+        <input type="text" placeholder="First Name"  class="fn"><input type="text" placeholder="Last Name"  class="ln"><h1></h1>
+        <input type="email" placeholder="Email" class="emailac" >
+        <h1></h1>
+        <input type="password" placeholder="Password" class="passwordac" > 
+        <h1></h1> 
+        <button class="btn btn-primary sign-up"style="border-radius:31px;margin-bottom:1%;" >Sign up</button>
+        <h1></h1>
+        <button class="btn btn-outline-dark Google"  >Sign up with Google</button>
+        <h1></h1>
+        <button class="btn btn-outline-dark Facebook" >Sign up with Facebook</button>
+        <h1></h1>
+        <a href="#">Close</a>
+      </div>
+      <!-- -----------body-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+      
+      <div class="group">
+        <div class="group-text" style="filter:brightness(100%)">
+          <h1>Computer Engineering</h1>
+          <p>142,645 Computer Engineers follows this.</p></p>
+        </div>
+      </div>
+
+      <!-- ----post_ Nav_Section---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      
+      
+        <div class="container post-container">
+          <div class="navbar navbar-expand-lg navbar-light bg-light post-nav">
+          <a class="navbar-brand" href="#" style="font-size:16px">Posts(32)</a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+          
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active " aria-current="page" href="#" style="font-size:16px;color:#8A8A8A"> <span style="color:#2E2E2E"></span> Article</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active " aria-current="page" href="#" style="font-size:16px;color:#8A8A8A"> <span style="color:#2E2E2E"></span> Event</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active " aria-current="page" href="#" style="font-size:16px;color:#8A8A8A"> <span style="color:#2E2E2E"></span> Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active " aria-current="page" href="#" style="font-size:16px;color:#8A8A8A"> <span style="color:#2E2E2E"></span> Job</a>
+            </li>
+          </ul>
+          <ul>
+
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><button class="btn btn-light ms-auto post-btn" style="background-color:#EDEEF0;">Write a Post<span><img src="images/Vector.svg" alt=""></span></button></li>
+            <li class="nav-item"><button class="btn btn-primary ms-auto post-btn">Join Group</button></li>
+          </ul>
+        </div>
+      </div>
+      <hr style="color:#8A8A8A;">
+      <!-- post Section------------------------------------------------------------------------------------------- -->
+        <div class="row card-row">
+          <div class="col-md-12 col-lg-7">
+            <div class="cards">
+              <img class="cards-image"src="images/Rectangle 5.png" alt="">
+              <h5 class="card-subject">Article</h5>
+              <div class="FlexText">
+                <h4 class="card-headLine" >What if famous brands had regular fonts? Meet RegulaBrands!</h4>
+              </div>              
+              <p class="text">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+              <div class="flexFlow">
+                <button class="profile-button"><img class="profile-photo"src="images/rectangle 3.png" alt=""> Profile Name</button>
+              <button class="share">Share</button>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-lg-4 place " style="margin-left:2.5%">
+            <input type="text" placeholder="Noida,Delhi" style="border-radius:4px;border-style:inset;margin:1.9% 0 10%; ">
+            <br>
+            <h5 style="margin-bottom:1.5vw">Recommended groups</h5>
+            <p><span style="margin-right:0.75%"><img  class="profile-photo"src="images/rectangle 3.png" alt="">Philosophy</span style="margin-right:5%"> <button class="btn btn-dark">Followed</button></p>
+            <p><span style="margin-right:0.75%"><img  class="profile-photo"src="images/rectangle 3.png" alt="">Philosophy</span style="margin-right:5%;background-color:#8A8A8A"> <button class="btn ">Follow</button></p>
+            <p><span style="margin-right:0.5%"><img  class="profile-photo"src="images/rectangle 3.png" alt="">Philosophy</span style="margin-right:5%;background-color:#8A8A8A"> <button class="btn ">Follow</button></p>
+            <p><span style="margin-right:0.75%"><img  class="profile-photo"src="images/rectangle 3.png" alt="">Philosophy</span style="margin-right:5%;background-color:##8A8A8A"> <button class="btn ">Follow</button></p>
+          </div>
+          <div class="col-md-12 col-lg-7">
+            <div class="cards">
+              <img class="cards-image"src="images/Rectangle 5.png" alt="">
+              <h5 class="card-subject">Article</h5>
+              <div class="FlexText">
+                <h4 class="card-headLine" >What if famous brands had regular fonts? Meet RegulaBrands!</h4>
+              </div>              
+              <p class="text">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+              <div class="flexFlow">
+                <button class="profile-button"><img class="profile-photo"src="images/rectangle 3.png" alt=""> Profile Name</button>
+              <button class="share">Share</button>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-7">
+            <div class="cards">
+              <img class="cards-image"src="images/Rectangle 5.png" alt="">
+              <h5 class="card-subject">Article</h5>
+              <div class="FlexText">
+                <h4 class="card-headLine" >What if famous brands had regular fonts? Meet RegulaBrands!</h4>
+              </div>              
+              <p class="text">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+              <div class="flexFlow">
+                <button class="profile-button"><img class="profile-photo"src="images/rectangle 3.png" alt=""> Profile Name</button>
+              <button class="share">Share</button>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-7">
+            <div class="cards">
+              <img class="cards-image"src="images/Rectangle 5.png" alt="">
+              <h5 class="card-subject">Article</h5>
+              <div class="FlexText">
+                <h4 class="card-headLine" >What if famous brands had regular fonts? Meet RegulaBrands!</h4>
+              </div>              
+              <p class="text">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+              <div class="flexFlow">
+                <button class="profile-button"><img class="profile-photo"src="images/rectangle 3.png" alt=""> Profile Name</button>
+              <button class="share">Share</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
